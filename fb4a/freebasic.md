@@ -71,9 +71,11 @@ n.      全体; [常作A-]整体; [常与my, your, his, her等连用]（某人�
 BASIC语言本来是为校园的大学生们创造的高级语言，目的是使大学生容易使用计算机。虽然初期的BASIC语言功能弱、语句少，但由于BASIC比较容易学习，它很快从校园走向社会，成为初学者学习计算机程序设计的首选语言。这个时期的BASIC主要在小型机上使用，以编译方式执行。  
 1975年，比尔·盖茨把它移植到PC上。
 
-|  ![Thomas E. Kurtz][2]   |  ![John G. Kemeny][3]   |
-| :---: | :---: |
-|  [Thomas E. Kurtz (1928.02.22-)][4]   |  [John G. Kemeny (1926.5.31-1992.12.26)][5]  |
+![Thomas E. Kurtz][2]    
+[Thomas E. Kurtz (1928.02.22-)][4]  
+![John G. Kemeny][3]   
+[John G. Kemeny (1926.5.31-1992.12.26)][5]  
+
 
 |   ![enter description here][6]   |
 | :---:  |
