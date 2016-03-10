@@ -1,7 +1,6 @@
 ---
 title: Free BASIC For All - 自由BASIC大全
 tags: free, basic, all, computer, programming, web
-grammar_cjkRuby: true
 grammar_abbr: true
 grammar_table: true
 grammar_defList: true
