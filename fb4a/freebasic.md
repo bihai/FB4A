@@ -34,8 +34,11 @@ grammar_tableExtra: true
 
 ->**Free BASIC For All**<-
 =======
-->__——完全自由BASIC__<-
+->__——完全自由的BASIC__<-
 -----
+
+->作者：bihai.org  <-
+
 [toc]
 # ->___前  言___<-  
 ----
