@@ -71,7 +71,6 @@ n.      全体; [常作A-]整体; [常与my, your, his, her等连用]（某人�
 
 ## _BASIC简史_
 1964年，美国达特茅斯大学的Thomas E. Kurtz(1928.2.22-)和John G. Kemeny (1926.5.31-1992.12.26，原籍匈牙利)，在Fortran II和ALGOL 60的基础上设计了一种新的计算机语言，命名为“Beginner's All-purpose Symbolic Instruction Code”， 意为初学者通用符号指令代码，简称BASIC。这个简单易学的计算机程序设计语言当时只有17条语句，12个函数和3个命令，这就是BASIC始祖——Dartmouth BASIC。 第一个BASIC程序(实际是一个编译器)于当地时间1964年5月1日凌晨4点在一台GE-265 (IBM 704) 主机中成功运行，操作者是Mike Busch和John McGeachie。从此Kurtz和Kemeny作为BASIC语言之父永载史册。  
-
 |  ![Thomas E. Kurtz][1]   |   ![John G. Kemeny][2]   |
 | :---: | :---: |
 |  [Thomas E. Kurtz (1928.02.22-)][3]    |    [John G. Kemeny (1926.5.31-1992.12.26)][4]    |
@@ -83,10 +82,9 @@ BASIC语言自诞生起就显示出了强大的生命力，各种衍生版本层
 ### 早期的BASIC
 
 + Dartmouth BASIC和True BASIC
-
-|   ![enter description here][5] |
-|   :---:   |
-|   达特茅斯大学John Kemeny(左)和Thomas Kurtz(中)与学生研究程序 |
+|  ![enter description here][5]   |
+|  :---:  |
+|达特茅斯大学John Kemeny(左)和Thomas Kurtz(中)与学生研究程序  |
 BASIC创始人J.
 Kemeny和T. Kurtz 1964年在达特茅斯大学使用的BASIC语言被称为Dartmouth
 BASIC， 这个BASIC祖先经过七次以上的版本更新，到1983年时演变成了True BASIC。最早的True BASIC可以同时在IBM

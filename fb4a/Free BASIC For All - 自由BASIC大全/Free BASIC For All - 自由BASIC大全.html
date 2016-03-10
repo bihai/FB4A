@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Free BASIC For All - 自由BASIC大全---小书匠,在线编辑器,MARKDOWN,Evernote,文件版本</title>
+	<script type="text/javascript" src="js/classList.js"></script>
+	<script type="text/javascript" src="js/reveal.js"></script>
+  <link rel="stylesheet" href="css/reveal/reveal.css">
+  <link rel="stylesheet" href="css/reveal/theme/white.css">
+	<style type="text/css">
+		body{
+			height: 100%;
+		}
+		a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+a:hover,
+a:active {
+  outline: 0;
+}
+a {
+  color: #0088cc;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #005580;
+  text-decoration: underline;
+}
+
+p {
+  margin: 0 0 1.1em;
+}
+
+small {
+  font-size: 85%;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+cite {
+  font-style: normal;
+}
+
+
+h1.story_title {
+	margin: 0.7em 0;
+}
+.story_tags {
+	margin: 0 0 1.2em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.5em 0;
+	margin: 1.0em 0 .6em 0;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 40px;
+}
+
+h1 {
+  font-size: 38.5px;
+}
+
+h2 {
+  font-size: 31.5px;
+}
+
+h3 {
+  font-size: 24.5px;
+}
+
+h4 {
+  font-size: 17.5px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 11.9px;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0 0 10px 35px;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+
+
+dl {
+  margin-bottom: 20px;
+}
+
+dt,
+dd {
+  line-height: 20px;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 10px;
+}
+
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #ffffff;
+}
+
+abbr[title],
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted #999999;
+}
+
+
+blockquote {
+  padding: 0 0 0 15px;
+  margin: 0 0 20px;
+  border-left: 5px solid #dddddd;
+}
+
+blockquote p {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+}
+
+blockquote small {
+  display: block;
+  line-height: 20px;
+  color: #999999;
+}
+
+blockquote small:before {
+  content: '\2014 \00A0';
+}
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+
+address {
+  display: block;
+  margin-bottom: 20px;
+  font-style: normal;
+  line-height: 20px;
+}
+img {
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+	border: 0;
+}
+
+table {
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+	border: 1px solid rgba(34,36,38,.15);
+}
+.tag.label{
+display: inline-block;
+vertical-align: baseline;
+line-height: 1;
+margin: 0em 0.125em;
+background-color: #e8e8e8;
+border-color: #e8e8e8;
+background-image: none;
+padding: 0.6em 0.8em;
+color: rgba(0, 0, 0, 0.6);
+text-transform: none;
+font-weight: bold;
+border-radius: 0.2857rem;
+box-sizing: border-box;
+font-size: 0.7428rem;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+}
+
+.table th {
+  font-weight: bold;
+}
+
+.table thead th {
+  vertical-align: bottom;
+}
+
+.table caption + thead tr:first-child th,
+.table caption + thead tr:first-child td,
+.table colgroup + thead tr:first-child th,
+.table colgroup + thead tr:first-child td,
+.table thead:first-child tr:first-child th,
+.table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+
+.table tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+
+.table .table {
+  background-color: #ffffff;
+}
+
+
+.table-striped tbody > tr:nth-child(odd) > td,
+.table-striped tbody > tr:nth-child(odd) > th {
+  background-color: #f9f9f9;
+}
+
+.table-celled.table tr td,.table-celled.table tr th {
+    border-left: 1px solid rgba(34,36,38,.1)
+}
+
+.table-celled.table tr td:first-child,.table-celled.table tr th:first-child {
+    border-left: none
+}
+
+.toc li {
+	list-style: none;
+}
+p {
+	line-height: 1.6;
+}
+body>p {
+  margin-bottom: 1.8em;
+}
+body>p>img.center,
+body>p>a>img.center {
+  display: block;
+  margin: 0 auto;
+  background-color: rgba(128,128,128,0.3);
+}
+body {
+	font-family: 'Helvetica Neue', Helvetica, Tahoma, Arial, 'Hiragino Sans GB', STHeiti, "Microsoft YaHei", "微软雅黑", 'WenQuanYi Micro Hei', STXihei, "华文细黑", Heiti, "黑体", SimSun, "宋体", Song, sans-serif;
+  font-size: 1.15em;
+  font-weight: 100;
+//  line-height: 1.8em;
+  color: #2f2f2f;
+}
+em.cjk_emphasis{
+	font-style: normal;
+	font-family: Georgia,"Times New Roman",Times,"楷体","AR PL UKai CN", "NSimSun","Songti SC","SimSun",serif!important;
+}
+body dt,
+body dd {
+  line-height: 1.35em;
+}
+body code, body .xiaoshujiang_code {
+//	background-color: #D6DBDF;
+	border: 0;
+  border-radius: 4px;
+//  color: #2C3E50;
+  font-size: 90%;
+//  padding: 2px 4px;
+}
+code {
+	background-color: #D6DBDF;
+	border-radius: 4px;
+	color: #2C3E50;
+	padding: 2px 4px;
+}
+.xiaoshujiang_code ol{
+	margin-bottom: 0px;
+}
+body h1 {
+  line-height: 1.6;
+}
+body h2 {
+  line-hieght: 1.1;
+}
+body h3 {
+  line-height: 1.1;
+}
+
+/**
+ * Treeview syntax highlighting based on highlight.js
+ * Copyright (c) 2014-2015, Asciidocfx Team, (MIT Licensed)
+ * https://github.com/asciidocfx/highlight-treeview.js
+ */
+.language-treeview.hljs{
+  position: relative;
+}
+.hljs-folder,
+.hljs-hiddenfile,
+.hljs-file {
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    height: 16px;
+}
+.hljs-folder:before,
+.hljs-file:before,
+.hljs-hiddenfile:before {
+    top: 0;
+    content: '';
+    width: 14px;
+    height: 12px;
+    margin-top: 0px;
+    margin-right: 3px;
+    position: relative;
+    display: inline-block;
+    background-size: 14px;
+    background-repeat: no-repeat;
+}
+.hljs-file:before,
+.hljs-hiddenfile:before {
+    height: 14px;
+    margin-left: 1px;
+}
+.hljs-hiddenfile {
+    opacity: 0.6;
+}
+.hljs-file.photo:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c5";
+}
+.hljs-file.plain:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f016";
+}
+.hljs-file.source:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c9";
+}
+.hljs-file.archive:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c6";
+}
+.hljs-file.audio:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c7";
+}
+.hljs-file.video:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c8";
+}
+.hljs-file.pdf:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c1";
+}
+.hljs-file.xls:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c3";
+}
+.hljs-file.doc:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c2";
+}
+.hljs-file.ppt:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c4";
+}
+.hljs-folder:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f114";
+}
+.hljs-hiddenfile:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f016";
+}
+.hljs-tvline {
+    margin-left: 6px;
+    position: absolute;
+    text-indent: -99em;
+    padding-bottom: 8px;
+    vertical-align: top;
+    display: inline-block;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: rgb(94, 144, 117);
+}
+.hljs-folder-branch {
+    width: 8px;
+    height: 8px;
+    margin-top: -1px;
+    margin-left: 6px;
+    text-indent: -99em;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(94, 144, 117);
+}
+.hljs-folder-branch.win {
+    width: 14px;
+    margin-right: 2px;
+}
+.hljs-folder-last-branch {
+    height: 7px;
+    width: 7px;
+    margin-left: 6px;
+    text-indent: -99em;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(94, 144, 117);
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: rgb(94, 144, 117);
+}
+.hljs-folder-last-branch.win {
+    width: 13px;
+    margin-right: 2px;
+}
+
+
+/**
+ * Treeview syntax highlighting based on highlight.js
+ */
+
+
+.mark{
+	border: 0;
+  background-color: #ddf3e7;
+  border-radius: 4px;
+  color: #29754d;
+  font-size: 90%;
+  padding: 2px 4px;
+}
+.line_mark{
+	border: 1px dashed #3A4C42;
+}
+code .mark, .xiaoshujiang_code .mark{
+	border-radius: 0px;
+	font-size: initial;
+	padding: initial;
+}
+a.attachment{
+	background-color: #ecf0f3;
+	border: 1px solid #bec6cb;
+	display: inline-block;
+	padding: 5px;
+	margin: 2px;
+}
+a.attachment i.fa{
+	font-size: 3em;
+  float: left;
+  margin-right: 0.2em;
+}
+a.attachment .filename{
+	vertical-align: top;
+  text-align: left;
+  font-weight: bold;
+}
+a.attachment .filesize{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  opacity: .6;
+  font-size: 80%;
+  white-space: nowrap;
+}
+.checkbox .checked{
+	text-decoration: line-through;
+}
+.flow-chart, .sequence-diagram{
+	text-align: center;
+}
+.plot, .plot-image{
+	text-align: center;
+	min-height: 200px;
+	min-width: 200px;
+}
+
+pre, .xiaoshujiang_pre {
+	line-height: initial !important;
+	word-wrap: break-word;
+	word-break: break-word;
+}
+
+.xiaoshujiang_pre {
+	margin: 1em 0px;
+	font-family: monospace;
+	white-space: pre;
+}
+
+.story_align_left {
+	text-align: left;
+}
+.story_align_right {
+	text-align: right;
+}
+.story_align_center {
+	text-align: center;
+}
+.story_align_justify {
+	text-align: justify;
+}
+
+
+/** 
+ * code line nums
+ */
+code.hljs.code_linenums, .xiaoshujiang_code.hljs.code_linenums{
+	position: relative;
+}
+.ol_linenums{
+	padding: 0px;
+	margin-left: 30px;
+	border-left: 1px solid #e0e0e0;
+}
+.li_linenum{
+	line-height: 20px;
+	margin-left: 10px;
+	list-style: none;
+	counter-increment: lines 1;
+}
+.li_linenum.li_list_style{
+	list-style: inherit;
+	margin-left: 5px;
+}
+.li_linenum:before, .li_linenum_before_span{
+	content: counter(lines, decimal);
+  position: absolute;
+  left: 0px;
+  text-align: center;
+  width: 2.5em;
+	opacity: 0.5;
+  vertical-align: top;
+}
+.li_linenum_before_span_hide{
+	display: none;
+}
+.xiaoshujiang_code .code_line_break_hack{
+	margin:0;
+	border:0;
+	border-top:0;
+	border-bottom:0;
+}
+/** 
+ * code line nums
+ */
+.mathjax-container{
+	text-align: center;
+}
+div.mathjax{
+	max-width: 700px;
+	margin: 0 auto;
+	font-size: 14px;
+}
+text{
+	font-size: 14px;
+}
+
+/*
+
+Intellij Idea-like styling (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #000;
+  background: #fff;
+  -webkit-text-size-adjust: none;
+}
+
+.hljs-subst,
+.hljs-title,
+.json .hljs-value {
+  font-weight: normal;
+  color: #000;
+}
+
+.hljs-comment,
+.hljs-javadoc,
+.diff .hljs-header {
+  color: #808080;
+  font-style: italic;
+}
+
+.hljs-annotation,
+.hljs-decorator,
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-doctype,
+.hljs-pi,
+.hljs-chunk,
+.hljs-shebang,
+.apache .hljs-cbracket,
+.hljs-prompt,
+.http .hljs-title {
+  color: #808000;
+}
+
+.hljs-tag,
+.hljs-pi {
+  background: #efefef;
+}
+
+.hljs-tag .hljs-title,
+.hljs-id,
+.hljs-attr_selector,
+.hljs-pseudo,
+.hljs-literal,
+.hljs-keyword,
+.hljs-hexcolor,
+.css .hljs-function,
+.ini .hljs-title,
+.css .hljs-class,
+.hljs-list .hljs-keyword,
+.nginx .hljs-title,
+.tex .hljs-command,
+.hljs-request,
+.hljs-status {
+  font-weight: bold;
+  color: #000080;
+}
+
+.hljs-attribute,
+.hljs-rule .hljs-keyword,
+.hljs-number,
+.hljs-date,
+.hljs-regexp,
+.tex .hljs-special {
+  font-weight: bold;
+  color: #0000ff;
+}
+
+.hljs-number,
+.hljs-regexp {
+  font-weight: normal;
+}
+
+.hljs-string,
+.hljs-value,
+.hljs-filter .hljs-argument,
+.css .hljs-function .hljs-params,
+.apache .hljs-tag {
+  color: #008000;
+  font-weight: bold;
+}
+
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.hljs-char,
+.tex .hljs-formula {
+  color: #000;
+  background: #d0eded;
+  font-style: italic;
+}
+
+.hljs-phpdoc,
+.hljs-dartdoc,
+.hljs-yardoctag,
+.hljs-javadoctag {
+  text-decoration: underline;
+}
+
+.hljs-variable,
+.hljs-envvar,
+.apache .hljs-sqbracket,
+.nginx .hljs-built_in,
+.hljs-name {
+  color: #660e7a;
+}
+
+.hljs-addition {
+  background: #baeeba;
+}
+
+.hljs-deletion {
+  background: #ffc8bd;
+}
+
+.diff .hljs-change {
+  background: #bccff9;
+}
+
+
+
+	</style>
+</head>
+<body onload="Reveal.initialize();">
+	<div class="reveal"><div class="slides">
+			<section class="section_content past"><h1><center><strong>Free BASIC For All</strong></center></h1>
+<h2><center><strong>——全民自由BASIC</strong></center></h2>
+<div class="story_align_center">作者：<a href="http://bihai.org" target="_blank">bihai.org</a>  </div>
+<p>[toc]</p>
+<h1><center><strong><em class="cjk_emphasis  ">前  言</em></strong></center></h1>
+<hr>
+<h2><em class="cjk_emphasis  ">书名解读</em></h2>
+<ul>
+<li><p><strong>Free</strong>:<br>
+adj.    免费的; 自由的; 免税的; 空闲的;<br>
+adv.    免费地; 自由地，无拘束地; 一帆风顺地;<br>
+vt.     释放; 免除; 使自由; 解救;</p></li>
+<li><p><strong>BASIC</strong>:<br>
+abbr.   Beginners All-purpose Symbolic Instruction Code<br>
+BASIC 语言（初学者通用指令码）</p></li>
+<li><p><strong>For</strong>:<br>
+prep.   为，为了; 倾向于; 关于; 当作<br>
+conj.   因为，由于</p></li>
+<li><p><strong>All</strong>:<br>
+adj.    全部的; 一切的; 各种的; 极度的，尽量的<br>
+pron.   全部; 一切; 每个人，每件东西; 全部情况<br>
+adv.    全部地; 完全地; 每个; 非常<br>
+n.      全体; [常作A-]整体; [常与my, your, his, her等连用]（某人）所有的一切</p></li>
+</ul>
+<p>所以本书书名有5种含义：</p>
+<ol>
+<li><p>Free <strong>BASIC</strong>, for us all，我们所有人的自由<strong>BASIC</strong></p></li>
+<li><p>Free <strong>BASIC</strong>, for all   platforms，所有平台的自由<strong>BASIC</strong></p></li>
+<li><p><strong>Free</strong> BASIC, for all.  为了所有人，所有平台，<strong>自由化</strong>BASIC</p></li>
+<li><p>Free and all <strong>about</strong> BASIC. <strong>关于</strong>BASIC的自由和所有的一切</p></li>
+<li><p><strong>Freedom</strong> is the basic for all. <strong>自由</strong>乃万物基本</p></li>
+</ol>
+<p>聪明的读者，请随便挑几种理解吧，或者您有更好的解读，请不吝赐教。</p>
+<h2><em class="cjk_emphasis  ">BASIC简史</em></h2>
+<p>1964年，美国达特茅斯大学的Thomas E. Kurtz(1928.2.22-)和John G. Kemeny (1926.5.31-1992.12.26，原籍匈牙利)，在Fortran II和ALGOL 60的基础上设计了一种新的计算机语言，命名为“Beginner’s All-purpose Symbolic Instruction Code”， 意为初学者通用符号指令代码，简称BASIC。这个简单易学的计算机程序设计语言当时只有17条语句，12个函数和3个命令，这就是BASIC始祖——Dartmouth BASIC。 第一个BASIC程序(实际是一个编译器)于当地时间1964年5月1日凌晨4点在一台GE-265 (IBM 704) 主机中成功运行，操作者是Mike Busch和John McGeachie。从此Kurtz和Kemeny作为BASIC语言之父永载史册。</p>
+<table class="table table-striped table-celled  ">
+<colgroup>
+<col style="text-align:center">
+<col style="text-align:center">
+</colgroup>
+<thead>
+<tr>
+<th style="text-align:center"><img src="images/Fearless_Leader.gif" name="images/Fearless_Leader.gif" alt="Thomas E. Kurtz" title="Fearless_Leader.gif"></th>
+<th style="text-align:center"><img src="images/Kemeny.jpeg" name="images/Kemeny.jpeg" alt="John G. Kemeny" title="Kemeny.jpeg"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a href="https://en.wikipedia.org/wiki/Thomas_E._Kurtz" target="_blank">Thomas E. Kurtz (1928.02.22-)</a></td>
+<td style="text-align:center"><a href="https://en.wikipedia.org/wiki/John_G._Kemeny" target="_blank">John G. Kemeny (1926.5.31-1992.12.26)</a></td>
+</tr>
+</tbody>
+</table>
+<p>BASIC语言本来是为校园的大学生们创造的高级语言，目的是使大学生容易使用计算机。虽然初期的BASIC语言功能弱、语句少，但由于BASIC比较容易学习，它很快从校园走向社会，成为初学者学习计算机程序设计的首选语言。<br>
+BASIC语言自诞生起就显示出了强大的生命力，各种衍生版本层出不穷。从APPLE-Ⅱ机上用的APPLE SOFT BASIC，到LASER- 310上用的MSBASIC，到IBM-PC及其兼容机上用的BASICA和GW-BASIC，再到MS-DOS上的MS BASIC、QuickBASIC 和VisualBasic 1.0， 直至Windows下的Visual Basic和Linux下的XBasic、YaBASIC等等，BASIC无处不在，甚至 许多电子游戏机(例如小霸王学习机)和微型电子词典(例如文曲星)中都实现了BASIC。如今BASIC语言在许多国家都作为一种计算机程序的教学语言和入门语言。谭浩强教授八十 年代所著《BASIC语言》一书，曾经多次再版，现在的发行量已经超过千万之巨，BASIC语言在中国有着大量拥趸，许多编程爱好者和专业人士也一直对它情有独钟。</p>
+<h3>早期的BASIC</h3>
+<ul>
+<li>
+<p>Dartmouth BASIC和True BASIC<br>
+|  <img src="images/kemenyandkurtz.jpg" name="images/kemenyandkurtz.jpg" alt="enter description here" title="kemenyandkurtz.jpg">   |<br>
+|  :—:  |<br>
+|达特茅斯大学John Kemeny(左)和Thomas Kurtz(中)与学生研究程序  |<br>
+BASIC创始人J.<br>
+Kemeny和T. Kurtz 1964年在达特茅斯大学使用的BASIC语言被称为Dartmouth<br>
+BASIC， 这个BASIC祖先经过七次以上的版本更新，到1983年时演变成了True BASIC。最早的True BASIC可以同时在IBM<br>
+PC和Apple Macintosh计算机上运行，既能以解释方式执行，也能将代码编译成机器语言从而提高运算速度。True<br>
+BASIC是一种真正的结构化程序设计语言，到今天已经发展出了DOS 、MacOS 、Windows<br>
+、Unix和Linux等各种操作系统下运行的多种版本，并提供了声音、图像、数学运算、多任务等丰富的功能库。True<br>
+BASIC现在仍然是一种有强大生命力的语言，可以访问<a href="http://truebasic.com" target="_blank">http://truebasic.com</a>来进一步了解这种古老而正宗的语言。</p>
+</li>
+<li>
+<p>Tiny BASIC<br>
+<a href="https://en.wikipedia.org/wiki/Li-Chen_Wang" target="_blank">Li-Chen Wang</a>博士(1935－，美籍华人，中文名字王理瑱)在1970年代中叶发表了第一个真正用于微处理器的BASIC版本，可以运行于任何Intel 8080及Zilog<br>
+Z80 微处理器上， 需要2KB内存，使用纸带输入。最早版本Palo Alto Tiny BASIC于1976年5月发表在著名计算机杂志[Dr. Dobb’<br>
+s](<a href="http://en.wikipedia.org/wiki/Dr" target="_blank">http://en.wikipedia.org/wiki/Dr</a>.<em class="cjk_emphasis  ">Dobb’s_Journal_of_Computer_Calisthenics</em>&amp;_<br>
+Orthodontia)。值得关注的是，这段汇编程序开头一段写着：@COPYLEFT ALL WRONGS RESERVED"All Wrongs Reserved"和"CopyLeft"<br>
+字样。</p>
+</li>
+</ul>
+<div class="xiaoshujiang_pre xiaoshujiang_code_container"><div class="language-x86asm hljs code_linenums xiaoshujiang_code"><ol start="1" class="ol_linenums" style="counter-reset: lines 0;"><li class="li_linenum " date-linenum="1"><span class="li_linenum_before_span li_linenum_before_span_hide">1</span><span class="hljs-comment">;*************************************************</span>&nbsp;<hr class="code_line_break_hack" style="margin:0;border:0;border-top:0;border-bottom:0;"></li><li class="li_linenum " date-linenum="2"><span class="li_linenum_before_span li_linenum_before_span_hide">2</span><span class="hljs-comment">;* </span>&nbsp;<hr class="code_line_break_hack" style="margin:0;border:0;border-top:0;border-bottom:0;"></li><li class="li_linenum " date-linenum="3"><span class="li_linenum_before_span li_linenum_before_span_hide">3</span><span class="hljs-comment">;*                TINY BASIC FOR INTEL 8080</span>&nbsp;<hr class="code_line_break_hack" style="margin:0;border:0;border-top:0;border-bottom:0;"></li><li class="li_linenum " date-linenum="4"><span class="li_linenum_before_span li_linenum_before_span_hide">4</span><span class="hljs-comment">;*                      VERSION 1.0</span>&nbsp;<hr class="code_line_break_hack" style="margin:0;border:0;border-top:0;border-bottom:0;"></li><li class="li_linenum " date-linenum="5"><span class="li_linenum_before_span li_linenum_before_span_hide">5</span><span class="hljs-comment">;*                    BY LI-CHEN WANG</span>&nbsp;<hr class="code_line_break_hack" style="margin:0;border:0;border-top:0;border-bottom:0;"></li><li class="li_linenum " date-linenum="6"><span class="li_linenum_before_span li_linenum_before_span_hide">6</span><span class="hljs-comment">;*                     10 JUNE, 1976 </span>&nbsp;<hr class="code_line_break_hack" style="margin:0;border:0;border-top:0;border-bottom:0;"></li><li class="li_linenum " date-linenum="7"><span class="li_linenum_before_span li_linenum_before_span_hide">7</span><span class="hljs-comment">;*                       @COPYLEFT </span>&nbsp;<hr class="code_line_break_hack" style="margin:0;border:0;border-top:0;border-bottom:0;"></li><li class="li_linenum " date-linenum="8"><span class="li_linenum_before_span li_linenum_before_span_hide">8</span><span class="hljs-comment">;*                  ALL WRONGS RESERVED</span>&nbsp;<hr class="code_line_break_hack" style="margin:0;border:0;border-top:0;border-bottom:0;"></li><li class="li_linenum " date-linenum="9"><span class="li_linenum_before_span li_linenum_before_span_hide">9</span><span class="hljs-comment">;* </span>&nbsp;<hr class="code_line_break_hack" style="margin:0;border:0;border-top:0;border-bottom:0;"></li><li class="li_linenum " date-linenum="10"><span class="li_linenum_before_span li_linenum_before_span_hide">10</span><span class="hljs-comment">;*************************************************</span>&nbsp;<hr class="code_line_break_hack" style="margin:0;border:0;border-top:0;border-bottom:0;"></li></ol></div></div>
+<ul>
+<li><p>Microsoft BASIC<br>
+BASIC语言虽然不是微软发明的，但谁也无法否认微软在BASIC的发展过程中做出的努力和取得的成就。1975年3月2日，微软公司发布了第一个真正意义上的产品<br>
+：用于MITS Altair 8800――第一台商用个人计算机的BASIC编译程序，从而开始了微软的传奇之旅。这个BASIC产品也为比尔・盖茨和保罗・艾伦的微软帝国奠定了基础，这也是比尔・盖茨对BASIC情有独钟的原因之一。 具有讽刺意味的是， 这个纸带上的著名产品本身也成了个人微型计算机历史上第一次大规模盗版的牺牲品——因为一份拷贝在正式发布前的一次展示会上丢失了，于是产生了大量复制品，这甚至影响到微软的产品策略，导致BASIC最终被免费随MS-DOS提供给用户。 这也是微软历史上第一次源代码泄漏事件。</p></li>
+</ul>
+<table class="table table-striped table-celled  ">
+<colgroup>
+<col style="text-align:center">
+<col style="text-align:center">
+</colgroup>
+<thead>
+<tr>
+<th style="text-align:center"><img src="images/ms.jpg" name="images/ms.jpg" alt="enter description here" title="ms.jpg"></th>
+<th style="text-align:center"><img src="images/basic1.0s.gif" name="images/basic1.0s.gif" alt="enter description here" title="basic1.0s.gif"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">最初的微软公司，摄于1978年12月 左下角是比尔・盖茨，右下角是保罗・艾伦</td>
+<td style="text-align:center">纸带上的MS BASIC 1.0</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Basic 解释器：<br>
+IBM发布的第一台PC机的ROM中包含了一个BASIC，而且它使用的由微软公司编写的PC- DOS里包含了一个扩展的磁盘版的BASIC，名为BASICA(高级BASIC)，而微软自己的MS-DOS则包含了一个类似的版本，称为GW-BASIC 。BASICA和GW-BASIC的区别在于BASIC 需要计算机内建ROM BASIC的支持。使用Basica/MS Basic/IBM Basic的IBM-PC如果没有启动软盘，ROM BASIC就会自动运行。<br>
+BASICA和GW-BASIC都是解释器，解释器相对容易实现而且不需要为结果代码保留内存，但与编译后的程序相比速度较慢。</p></li>
+</ul>
+<div class="xiaoshujiang_pre xiaoshujiang_code_container"><div class="language-basic hljs mel code_linenums xiaoshujiang_code"><ol start="1" class="ol_linenums" style="counter-reset: lines 0;"><li class="li_linenum " date-linenum="1"><span class="li_linenum_before_span li_linenum_before_span_hide">1</span><span class="hljs-number">10</span> <span class="hljs-keyword">color</span> <span class="hljs-number">14</span>&nbsp;<hr class="code_line_break_hack" style="margin:0;border:0;border-top:0;border-bottom:0;"></li><li class="li_linenum " date-linenum="2"><span class="li_linenum_before_span li_linenum_before_span_hide">2</span><span class="hljs-number">20</span> <span class="hljs-keyword">print</span> <span class="hljs-string">"Welcome to http://bihai.org"</span>&nbsp;<hr class="code_line_break_hack" style="margin:0;border:0;border-top:0;border-bottom:0;"></li></ol></div></div>
+<table class="table table-striped table-celled  ">
+<colgroup>
+<col style="text-align:center">
+</colgroup>
+<thead>
+<tr>
+<th style="text-align:center"><img src="images/gb-basic.jpg" name="images/gb-basic.jpg" alt="gw-basic" title="gb-basic.jpg"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">GW BASIC 3.23 运行实例</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-celled  ">
+<colgroup>
+<col style="text-align:center">
+<col style="text-align:center">
+</colgroup>
+<thead>
+<tr>
+<th style="text-align:center"><img src="images/laser.jpg" name="images/laser.jpg" alt="Laser" title="laser.jpg"></th>
+<th style="text-align:center"><img src="images/appleii.jpg" name="images/appleii.jpg" alt="apple ii" title="appleii.jpg"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Laser 310，香港制造，1984年开始生产，CPU: Zilog Z80 A，速度3.54 MHz，内存16-64KB，带电视和视频接口，操作系统MS BASIC，1985年价格为257美元。</td>
+<td style="text-align:center">Apple II，美国制造，1983年开始生产，CPU: MOS 65c02，速度1.02 MHz，内存64KB，操作系统DOS 3.3 or ProDOS，1298美元。</td>
+</tr>
+</tbody>
+</table>
+</section>
+	</div></div>
+</body>
+</html>
