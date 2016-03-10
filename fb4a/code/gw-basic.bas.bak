@@ -1,0 +1,5 @@
+10 LOCATE 10,10
+20 COLOR 14
+15 screen 19
+30 PRINT "Welcome to http://bihai.org"
+sleep
