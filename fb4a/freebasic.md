@@ -34,7 +34,7 @@ grammar_tableExtra: true
 
 ->**Free BASIC For All**<-
 =======
-->__——解放BASIC__<-
+->__——完全自由BASIC__<-
 -----
 [toc]
 # ->___前  言___<-  
